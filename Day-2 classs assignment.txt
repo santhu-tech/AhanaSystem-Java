@@ -1,0 +1,36 @@
+
+
+https://forms.office.com/r/65hbGPy9dg?origin=lprLink
+
+
+
+Problem Statement:-Java Basic concepts 
+Create a simple banking application that allows a user to perform the following operations using a menu-driven interface:
+
+Check account balance
+Deposit money
+Withdraw money
+Exit
+The program should:
+
+Use a switch statement to select the user's action.
+Use a loop to repeatedly show the menu until the user chooses to exit.
+Use basic data types like double for the account balance.
+Perform basic operations such as addition, subtraction, and conditional checks (e.g., checking if the withdrawal amount is greater than the available balance).
+
+OOPS Concepts:
+class & objects:
+Problem Statement:1
+A bank needs to manage its customer information. Each customer has a name, account number, and balance. Create a Customer class that represents a customer in the bank, with attributes for the name, account number, and balance. Implement a method to display the customer details and another method to deposit money into the account.
+
+Problem Statement:2-Inheritance
+Extend the banking system by adding different types of accounts: SavingsAccount and CurrentAccount. Both should inherit from a base class called BankAccount. The SavingsAccount should have an interest rate attribute, while the CurrentAccount should have an overdraft limit.
+
+Problem Statement:3-Polymorphism
+In the banking system, implement a method to process withdrawals for both SavingsAccount and CurrentAccount using polymorphism. The withdrawal method should be defined in the base class and overridden in each derived class.
+
+Problem Statement:-Abstraction
+Create an abstract class BankAccount with abstract methods for deposit and withdrawal. The concrete classes SavingsAccount and CurrentAccount will implement these methods. Additionally, include a method to display the account details.
+
+Problem Statement:-Interface Use Case
+In a banking system, various types of bank accounts (like SavingsAccount and CurrentAccount) should implement a common interface for basic transactions such as deposit, withdraw, and displayBalance. The interface will ensure that all account types provide their own implementation of these methods.

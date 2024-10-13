@@ -1,0 +1,61 @@
+Polymorphsim -->Opertaion overloading, Operation Overriding 
+
+Encapsulation :
+Problem Statement:
+Create a class named Temperature that encapsulates the temperature value in Celsius. Provide methods to set the temperature, get the temperature in Celsius, and convert it to Fahrenheit. Ensure that the temperature value cannot be set to an invalid value (e.g., below absolute zero).
+
+create a Person class that encapsulates the properties of a person, such as their name and age. We'll provide public methods to access and modify these properties while keeping the actual fields private
+
+Design and implement a simple banking system that allows users to manage their bank accounts using encapsulation principles. The system should provide functionalities for depositing money, withdrawing money, and checking the account balance, while ensuring that the internal state of the account is protected from direct access.
+
+Class Structure:
+
+Create a class named BankAccount with the following private member variables:
+accountNumber (String): The account number of the bank account.
+balance (double): The current balance of the bank account.
+Constructor:
+
+Implement a constructor for the BankAccount class that accepts the account number and an initial balance. Ensure that the initial balance is set correctly.
+Methods:
+
+Implement the following public methods in the BankAccount class:
+deposit(double amount): A method that allows the user to deposit money into the account. The method should check if the deposit amount is positive before updating the balance.
+withdraw(double amount): A method that allows the user to withdraw money from the account. The method should check if the withdrawal amount is positive and does not exceed the current balance before updating the balance.
+getBalance(): A method that returns the current balance of the account without allowing direct modification of the balance.
+Main Class:
+
+Create a class named Main with a main method to demonstrate the functionality of the BankAccount class:
+Create an instance of BankAccount with a sample account number and initial balance.
+Use the deposit method to add money to the account and print the balance after the deposit.
+Use the withdraw method to withdraw money from the account and print the balance after the withdrawal.
+Attempt to access the private balance variable directly (commented out to show that it's not accessible).
+
+Exception handling -->try with resources ,try-catch,Custom Exception 
+
+You are tasked with developing a simple banking system where customers can withdraw money from their accounts. However, certain error conditions must be handled:
+
+If the user tries to withdraw more money than is available in the account, an InsufficientFundsException should be thrown.
+If the user tries to withdraw a negative amount, an InvalidAmountException should be thrown.
+If the withdrawal is successful, the account balance should be updated accordingly.
+Create custom exceptions for the above error conditions and implement the system to handle these exceptions.
+
+check the age of a person who is registering for an event. If the age is below 18, a custom exception named AgeLimitException should be thrown with a message saying the person is not eligible.
+
+Wraaper class :
+
+Imagine a simple application where a user inputs a temperature in Fahrenheit, and you convert it to Celsius. You can use the Double wrapper class to handle temperature values as objects.
+
+Functional Interface:
+
+Problem Statement:
+Create a functional interface called NumberFilter that checks if a number is even. Implement this interface using a lambda expression and demonstrate its usage with an array of integers.
+
+Create a functional interface called StringLengthChecker that checks if the length of a given string is greater than a specified value. Implement this using a lambda expression.
+
+Polymorphism:
+Probelm statement -Use Case: Banking Application -
+
+Scenario: In our banking application, we want to:
+
+Calculate interest for different types of accounts -compile-time polymorphism.
+Perform common operations like depositing and withdrawing funds, but have different implementations based on the type of account -runtime polymorphism.

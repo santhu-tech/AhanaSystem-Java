@@ -1,0 +1,5 @@
+Class Assignment 
+
+1)Explore Primitive data types default vales
+2)Explore different options with primitive data type value printing  
+3)Find the greatest number in the given three numbers using for loop

@@ -1,0 +1,41 @@
+Day-3 Class Assignment:
+
+Problem Statement-Custom Exception
+
+In a banking application, it’s crucial to manage errors effectively to ensure a smooth user experience. This includes handling scenarios such as:
+
+Invalid Deposit Amount: Depositing a negative or zero amount should not be allowed.
+Insufficient Funds: Attempting to withdraw more money than the current balance in a savings account.
+Overdraft Limit Exceeded: Attempting to withdraw more than the available balance plus overdraft limit in a current account.
+To handle these scenarios, create custom exception classes for each case, and integrate them into the SavingsAccount and CurrentAccount implementations
+
+Problem statement -Multilevel inheritance
+In a banking system, the functionality of accounts can be extended further by creating specialized account types. For instance, both SavingsAccount and CurrentAccount could have a specific type of account known as a PremiumAccount that offers additional benefits, such as higher interest rates for savings accounts
+
+
+Account Management
+
+Interface with Java -8 features:
+
+Implement a base interface AccountOperations that defines common operations for all types of bank accounts. This interface should include:
+Constant fields representing different account types (e.g., Savings, Current, Fixed).
+Abstract methods for getting the account balance and account type.
+A default method for generating an account summary.
+A static method for validating account types.
+Savings Account Operations
+
+Extend the AccountOperations interface with a new interface SavingsAccountOperations that includes:
+An abstract method for applying interest to the savings account.
+Concrete Implementation
+
+Create a SavingsAccount class that implements the SavingsAccountOperations interface. This class should provide:
+A constructor to initialize the account with an initial balance.
+Implementations for all abstract methods defined in the interfaces.
+Logic to calculate and apply interest to the account balance based on a specified interest rate.
+User Interaction
+
+Develop a Main class that:
+Creates an instance of SavingsAccount with an initial balance.
+Allows users to view the account summary (account type and balance).
+Allows users to apply interest to the account and view the updated balance.
+Validates whether a specified account type is valid using the static method defined in the AccountOperations interface.
