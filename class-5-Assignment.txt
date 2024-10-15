@@ -1,0 +1,13 @@
+class-5-Assignment
+
+Create a simple eCommerce application using Java Collections and Java 8 Stream API. The application should allow users to:
+
+List available products.
+Add products to a cart.
+Remove products from the cart.
+Display the total price of items in the cart.
+Apply a discount for orders above a certain amount.
+Filter products by categories.
+
+Use the multiple collections (List,Hashmap,PriorityQueue ,set,etc.. ) in the above classes.
+
