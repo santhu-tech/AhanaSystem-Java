@@ -1,0 +1,172 @@
+List out all the database comments:
+
+1)\l -->To list databases ->psql
+
+2)Select datname from pg_database; ->pgadmin
+
+3)Create a database:
+1)Create database databasenaem; ->psql
+
+4)CRUD operation:
+Create,Read,Update,Delete
+1)Create table tablename(id int,name varchar(20),city varchar(100));
+\d tablename to check the tables
+\c database name -->Enter into the particular database
+
+5)Insert values inside table:
+1)Insert into tablename values(respective values of all attributes)
+
+6)Read data from table
+1)select * from tablename -->display entire data 
+2)select columnname from tablenmae -->display column information alone 
+
+7)Updating data:
+1)update tablename set columnname='' where columnname=''; 
+
+8)Delete data from table:
+1)delete from tablename ; -->Only remove the table content
+
+9)Drop table :
+1)drop from tablname/database name -->Entire structure will get removed
+
+Varaibles widely used:
+Numeric -->Int,Double,Float
+String -->Varchar
+Date -->Date
+Boolean -->Boolean
+
+Constraints :
+Primary key -->Uniques values ,cannot contains NULL values ,Only one primary key to the table 
+Example
+create table customers ( id int NOT NULL,name varchar(30) NOT NULL);
+
+NOT NULL -->Null Value not allowed to the column
+Default -->By default it will take it that value 
+Example:
+create table customers ( id int NOT NULL,name varchar(30) NOT NULL,acC_type NOT NULL DEFAULT 'Savings');
+
+Auto_Increment:
+
+Incremnet we can use Serial
+Create table employees (
+	emp_id SERIAL PRIMARY KEY,
+	fname VARCHAR(20) NOT NULL,
+	lname VARCHAR(20) NOT NULL,
+	email VARCHAR(100)NOT NULL UNIQUE,
+	dept VARCHAR(10) NOT NULL,
+	);
+
+Insert into tablename(fname,lname,email,dept,salary,joining date) values (' ', ' ',' ', , );
+
+or 
+
+Insert into tablename values ( );
+ 
+Data Refining : 
+Clauses :
+Where -->Based on specific criteria you have to select the rows 
+we can use Logicla or ,and operators 
+we can use Relational operators like >,<,>=<= as well
+IN ,NOT IN ,Between we can use as well
+
+Select * from tablname where emp_id=5;
+
+
+Distinct --> unique values 
+ 
+Oreder By --> Sorted in any order
+default is ascending order 
+For descending we need to specify manually
+
+Example:select * from tablename order by columnname;
+
+Limit --> limiting the data 
+
+Like   -->start with ,contains or end with specific constriants ,%follwedbycondition
+
+Example:selece *from employee where fname Like %a  -->starts with a 
+
+%a% -->contains 
+
+fname like _a% -->first letter be anything second letter is a 
+
+Aggrgate function :-->Mathametical operations 
+How to find total no of employees ?
+Employee with max salary
+Average salary 
+
+count,Avg,sum,Min,Max
+
+
+Group by :How many employees in each department
+
+select employees from employee group by dept;
+
+select dep,count(emp_id) from employee group by
+
+Alter Table :
+
+Altering the structure of the table 
+
+Ex: Alter table table_name add column age INT  DEFAULT 0;
+
+DROP,RENAME 
+
+ALTER TABLE Person
+ALTER COLUMN fname
+SET DATA TYPE VARCHAR(150);
+
+Alter table person 
+alter column fname
+set not null;
+
+create table contacts (
+	name VARCHAR(50),
+	mob VARCHAR(15) UNIQUE CHECK (LENGTH(mob) >=10));
+
+NAMED CONSTRIANTS:
+Create table contacts(name VARCHAR(50),mob VARCHAR (15) UNIQUE,CONSTRAINT mon_no_less_than_10 digits CHECK(LENGTH(mob)>=10));  //Constratints for readiablity in your logs 
+
+
+Relationships :
+one-one
+one-Many
+Many-Many
+
+Foreign key :Relationship between two table 
+Primary key of one table act as foreign key of another table.
+Ex:
+Create tabelle customers(cust_id serial primarykey,cust_name varchar(100) not null)
+
+Create table orders(ord_id serial primary key,ord_date date not null,price numeric not null,
+cust_id integer not null,Foreign key(cust_id) references customers(cust_id));
+
+JOINS:
+
+Used to combine rows from two or more tables based on a related column between them.
+
+Types of Join:
+
+Cross join -->Every row from one table is combined with every row from another table
+ 
+Inner join -->match between specified columns in the
+Left and right tables 
+
+Manay-Many
+Students course 
+
+Join-->default it's Inner join
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
