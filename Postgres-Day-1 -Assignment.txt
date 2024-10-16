@@ -1,0 +1,68 @@
+Transactions table:
+
+transaction_id (INTEGER)
+customer_id (INTEGER)
+transaction_type (VARCHAR) (e.g., 'Deposit', 'Withdrawal')
+amount (DECIMAL)
+transaction_date (DATE)
+account_id (INTEGER)
+
+Task:
+
+1)Retrieve all transactions for a specific customer (John Doe)
+
+Use the WHERE clause to filter for a specific customer.
+
+2)Find distinct transaction types (Deposit, Withdrawal)
+
+Use DISTINCT to get the unique transaction types.
+
+3)List all transactions for the month of October 2024, ordered by transaction amount (largest first)
+
+Use WHERE with ORDER BY to sort transactions.
+
+4)Find the total amount deposited by each customer
+
+Use GROUP BY to group transactions by customer and calculate the total deposits
+
+Assignment 2 :Customer Account Summary
+Problem Statement:
+You need to create summary reports for customer accounts, which include information such as the total balance, number of accounts, and filtering based on customer details.
+
+Tables to Use:
+Accounts
+account_id (INTEGER)
+account_type (VARCHAR) (e.g., 'Savings', 'Current')
+balance (DECIMAL)
+customer_id (INTEGER)
+
+Customers
+customer_id (INTEGER)
+first_name (VARCHAR)
+last_name (VARCHAR)
+email (VARCHAR)
+
+Task:
+1)Find all customers who have more than one account
+
+Use GROUP BY and HAVING to find customers with multiple accounts.
+
+2)Retrieve distinct account types available in the bank
+
+Use DISTINCT to get unique account types.
+
+3)List all accounts with a balance greater than $5,000, ordered by balance (smallest to largest)
+
+Use WHERE with ORDER BY to filter and sort.
+
+4)Find the total balance for all accounts of each customer
+
+Use GROUP BY to calculate total balance for each customer
+
+5)Find customers whose total balance across all accounts exceeds $50,000
+
+Combine GROUP BY with HAVING to filter based on total balance.
+
+6)Retrieve all customers who have at least one savings account
+
+Use WHERE and DISTINCT to find customers with specific account types.
